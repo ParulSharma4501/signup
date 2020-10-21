@@ -1,0 +1,335 @@
+<html>
+
+<head>
+    <title>Sign Up Form</title>
+    <script src="JQuery/jquery-1.8.2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#cross").click(function() {
+                $("#outer").slideUp(1000);
+                $("#go").slideDown(1000);
+                $("#tenant").fadeIn(1);
+            });
+            
+            $("#go").click(function()
+                           {
+                $("#go").slideUp(1000);
+                $("#tenant").fadeOut(100);
+                $("#outer").slideDown(1000);
+            }
+                           
+                           );
+            
+            
+        });
+
+    </script>
+    <style>
+        #bg {
+            background-image: url(Pictaa/Background.jpg);
+/*            background-size: 1200px 430px;*/
+            background-repeat: no-repeat;
+            width: 1200px;
+            height: 650px;
+            margin: auto;
+            margin-top: 37px;
+            /*             box-shadow: 3px 0px 0px 4px teal;*/
+/*            padding-top: 220px;*/
+        }
+
+        * {
+            margin: 0px;
+        }
+
+        body {
+            background-color: #e0ebeb;
+            
+        }
+
+        #outer {
+            background-color: white;
+            /*            border: 1px solid black;*/
+
+            width: 330px;
+            height: 500px;
+            margin-top: 70px;
+            float: left;
+            margin-left: 450px;
+            /*            box-shadow: 5px 0px 10px 2px teal;*/
+            box-shadow: 2px 6px 5px 0px teal;
+            border-radius: 60px;
+            display:none;
+        }
+
+        #outer:hover {
+            /*            box-shadow: 7px 0px 15px 4px teal;*/
+            box-shadow: 0px 10px 5px 0px teal;
+        }
+
+        #cross {
+            background-image: url(Interfaces/error.png);
+            background-size: 18px 18px;
+            background-position: bottom 0px right 20px;
+            background-repeat: no-repeat;
+            width: 60px;
+            height: 30px;
+            float: right;
+            border-radius: 50%;
+        }
+
+        #cross:hover {
+            transform: scale(1.2);
+        }
+
+        #cross:active {
+            transform: translate(2px, 2px);
+        }
+
+        #text1 {
+
+            font-family: Malgun Gothic Regular;
+            font-size: 24px;
+            color: #3ecfa6;
+            font-weight: bold;
+        }
+
+        #text2 {
+            font-family: UniSansRegular;
+            font-size: 14px;
+            color: gray;
+            /*            background-color: aqua;*/
+
+        }
+
+        #text3 {
+            font-family: UniSansRegular;
+            font-size: 14px;
+            color: gray;
+        }
+
+        #text4 {
+            font-family: UniSansRegular;
+            font-size: 13px;
+            color: gray;
+            text-align: center;
+            padding: 7px;
+        }
+
+        #t1 {
+            text-align: center;
+            padding: 7px;
+        }
+
+        #t2 {
+            text-align: center;
+            padding: 15px;
+        }
+
+        #namepic {
+            background-image: url(Interfaces/user.png);
+            background-size: 26px 26px;
+            background-repeat: no-repeat;
+            height: 35px;
+            margin-left: 35px;
+            background-position: bottom 2px right 15px;
+            width: 50px;
+        }
+
+        #passpic {
+            background-image: url(Interfaces/padlock.png);
+            background-size: 26px 22px;
+            background-repeat: no-repeat;
+            height: 35px;
+            margin-left: 40px;
+            background-position: bottom 2px right 15px;
+            width: 50px;
+        }
+
+        #mailpic {
+            background-image: url(Interfaces/envelope.png);
+            background-size: 25px 22px;
+            background-repeat: no-repeat;
+            height: 35px;
+            margin-left: 40px;
+            background-position: bottom 2px right 15px;
+            width: 50px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 95%;
+            /*            text-align:center;*/
+            outline: none;
+            line-height: 35px;
+            font-size: 13px;
+            color: #3ecfa6;
+            border: none;
+            border-bottom: gray 1px solid;
+        }
+
+        input[type="checkbox"] {}
+
+        #box {
+            height: 30px;
+            margin-left: 40px;
+            background-position: bottom 2px right 15px;
+            width: 50px;
+            color: #3ecfa6;
+        }
+
+        #color {
+            color: #3ecfa6;
+            text-decoration-line: underline;
+        }
+
+        #btn {
+            padding: 5px;
+            width: 260px;
+            background-color: #3ecfa6;
+            color: white;
+            border: 1px #3ecfa6 solid;
+            font-weight: bolder;
+            font-family: UniSansRegular;
+            font-size: 20px;
+            outline: none;
+        }
+
+        #btn:hover {
+            background-color: #e0ebeb;
+            color: #3ecfa6;
+            border: none;
+            font-weight: bolder;
+        }
+
+        #btn:active {
+            transform: translate(2px, 2px);
+
+        }
+        
+        #go{
+            color:white;
+            background-color: #3ecfa6;
+            width:70px;
+            height:70px;
+            margin-left:550px;
+            margin-top: 200px;
+            padding:15px;
+            font-family:Forte Regular;
+            font-size: 50px;
+            border-radius: 50%;
+            text-align: center;
+            float: left;
+            font-weight: bolder;
+        }
+        
+
+        #tenant{
+            font-family:Forte Regular;
+            width:60px;
+            height:60px;
+            font-size: 50px;
+            margin-top: 200px;
+            text-align: center;
+            float: left;
+            padding-top:15px;
+            padding-left:15px;
+            color:#3ecfa6;
+            font-weight: bolder;
+        }
+        
+/*
+        #get{
+            font-family: UniSansRegularItalic;
+            width:40px;
+            height:20px;
+            text-align: center;
+            padding:2px;
+            color:white;
+            background-color: #3ecfa6;
+            font-weight: bolder;
+            margin-left:590px;
+        }
+*/
+/*
+        
+            margin:auto;
+            margin-left:500px;
+        }
+*/
+        #go:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+   <div id="bro">
+        <div id="go">Go</div>
+       <div id="tenant">Tenant!</div> 
+       </div> 
+<!--   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+<!--<div id="get">Get In</div>-->
+    <div id="bg">
+        <div id="outer">
+            <table border="0" width="100%">
+                <tr>
+                    <td colspan="2">
+                        <div id="cross"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="t1" colspan="2"><span id="text1">Try free for 28 days<br>(no credit card required)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="t2">
+                        <span id="text2">Start saving time and hassle by automating everything from the very first veiwing,through pre-qualification,check-in and check-out</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="namepic"></td>
+                    <td><input type="text" id="Pn" placeholder="Name"></td>
+                </tr>
+                <tr>
+                    <td id="mailpic"></td>
+                    <td><input type="email" id="m" placeholder="Email"></td>
+                </tr>
+                <tr>
+                    <td id="passpic"></td>
+                    <td><input type="password" id="pw" placeholder="Password"></td>
+                </tr>
+
+                <tr height="20px">
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="box" align="center"><input type="checkbox"></td>
+                    <td id="text3">I agreee to the <span id="color">terms and conditions</span> and<br> <span id="color">privacy policy.</span></td>
+                </tr>
+                <tr height="20px">
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center"> <input type="button" id="btn" value="LET'S  GO"></td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="2" id="text4">Or look at <span id="color">features</span> and <span id="color">pricing.</span></td>
+                </tr>
+
+
+            </table>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
